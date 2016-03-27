@@ -62,5 +62,11 @@ target/
 #Ipython Notebook
 .ipynb_checkpoints
 
-# python3 virtualenv
-app/py3env
+# py3env (hidden directory)
+.py3env/
+# eclipse pydev files
+app/.project
+app/.pydevproject
+# no need to check in django-specific static files
+app/static/admin
+lb/static/

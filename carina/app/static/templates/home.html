@@ -1,7 +1,9 @@
-<!-- Main Content -->
-	<div class="container container-extra">
-		<div class="row bottom-margin">
-			<span class="yelling-font">Welcome Farmers</span> 
-			<p>Farmer's Market API
-		</div> <!-- /row -->
-	</div> <!--/Main Content container -->
+<section id="welcome" class="black">
+	<div class="content">
+		<slick center-mode="true" center-padding="60px" variable-width="true" adaptive-height="true" slides-to-show=3 autoplay="true" autoplay-speed="2000" pause-on-hover="true" responsive="[{breakpoint: 768,settings: {arrows: false,centerMode: true,centerPadding: '40px',slidesToShow: 3}},{breakpoint: 480,settings: {arrows: false,centerMode: true,centerPadding: '40px',slidesToShow: 1}}]">
+			<div style="background-image:url('{{option.imageUrl}}')" class="slider center" ng-repeat="option in carouselOptions">
+				<h3>{{option.name}}</h3>
+			</div>
+		</slick>
+	</div>
+</section>

@@ -5,7 +5,6 @@ version: "2"
 services:
   lb:
     # The load balancer container. Built from the lb/Dockerfile.
-    container_name: pythonwebapp_lb
     build: lb
     restart: unless-stopped
     networks:
@@ -24,22 +23,22 @@ services:
           - apps
     environment:
       # Environment variables to configure the app on startup.
-      - MYSQL_DATABASE=guestbook
-      - MYSQL_HOST=pythonwebapp_db
+      - MYSQL_DATABASE=farm
+      - MYSQL_HOST=farm_db
 
   db:
     # The database container. Built from the db/Dockerfile.
-    container_name: pythonwebapp_db
+    container_name: farm_db
     build: db
     restart: unless-stopped
     networks:
       - backend
     environment:
       # Environment variables to configure MySQL on startup.
-      - MYSQL_DATABASE=guestbook
+      - MYSQL_DATABASE=farm
 
   data:
-    container_name: pythonwebapp_db_data
+    container_name: farm_db_data
     # The Data Volume Container used to mount a volume to store our persistent data
     # https://getcarina.com/docs/tutorials/data-volume-containers/
     image: cirros

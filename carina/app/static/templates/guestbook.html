@@ -1,0 +1,38 @@
+<div class="row">
+	<div class="col-sm-4"></div>
+	<div class="col-sm-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">FarmProj Guestbook</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<h2>Sign the Guestbook!</h2>
+				</div>
+				<div class="row">
+					<form novalidate class="simple-form">
+						<label for="name" class="sr-only">Name:</label>
+						<input ng-model="newGuest.name" type="text" id="name" name="name" class="form-control" placeholder="Name" required autofocus>
+						<label for="email" class="sr-only">E-mail:</label>
+						<input ng-model="newGuest.email"type="email" id="email" name="email" class="form-control" placeholder="E-Mail" required>
+						<div class="row">
+							<div class="col-sm-8"></div>
+							<div class="col-sm-4">
+								<button type="submit" id="guestSubmit" class="btn btn-sm btn-primary btn-block" ng-click="create(newGuest)" value="Submit">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="row">
+					<h2>Previous Guests:</h2>
+				</div>
+				<div class="row">
+					<ol>
+						<li ng-repeat="guest in guests track by guest.pk">{{ guest.fields.name }}</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4"></div>
+</div>
