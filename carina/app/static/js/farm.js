@@ -2,9 +2,9 @@
 
 /* App Module */
 
-var dark = angular.module('dark', ['ngRoute', 'darkControllers', 'cardsServices']);
+var farm = angular.module('farm', ['ngRoute', 'farmControllers', 'cardsServices']);
 
-dark.config([ '$routeProvider' , function($routeProvider){
+farm.config([ '$routeProvider' , function($routeProvider){
 	$routeProvider.when('/cards', {
 		templateUrl : '../static/templates/cards.html',
 		controller : 'CardsController'
