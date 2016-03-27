@@ -1,0 +1,51 @@
+body {
+	background-color: #000000;
+	background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../images/header.jpg');
+    min-height: 2000px;
+    padding-top: 200px;
+    color: white;
+}
+	
+.navbar-default {
+	background-color: #000000;
+	background-image: none;
+}
+
+.navbar-brand>img {
+	width: auto;
+	margin-top: -40px;
+	}
+
+.navbar-fixed-top {
+	margin-top: 30px;
+}
+
+@media (min-width: 1024px) {
+	.container-extra {
+		width: 60%;
+	}
+}
+
+.yelling-font {
+	color: orange;
+	font-size: 4em;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.bottom-margin {
+	margin-bottom: 50px;
+}
+
+.title-font{
+	margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 2cm;
+    font-size: 3em;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;;
+    font-weight: 500;
+    line-height: 1.1;
+    color: orange;
+
+}
